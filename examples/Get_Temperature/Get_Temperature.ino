@@ -5,10 +5,12 @@ MatrixMotion Motion;
 void setup()
 {
     Serial.begin(115200);
-    Serial.print("Starting...\n");
     if (Motion.begin()){
-        Serial.print("Motion Sensor Activated");
-    };
+        Serial.println("Matirx Motion Sensor Activated");
+    }
+    else{
+        Serial.println("Matirx Motion Sensor activation failed");
+    }
 }
 
 void loop()
@@ -17,5 +19,5 @@ void loop()
     // Temperature unit: Degree Celsius
     Serial.print("Temperature=");
     Serial.println(Motion.getTemperature());
-    delay(200);
+    delay(250);
 }

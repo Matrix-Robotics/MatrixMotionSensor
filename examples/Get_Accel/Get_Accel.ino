@@ -7,8 +7,11 @@ void setup()
     Serial.begin(115200);
     Serial.print("Starting...\n");
     if (Motion.begin()){
-        Serial.print("Motion Sensor Activated");
-    };
+        Serial.println("Matirx Motion Sensor Activated");
+    }
+    else{
+        Serial.println("Matirx Motion Sensor activation failed");
+    }
 }
 
 void loop()
@@ -22,5 +25,5 @@ void loop()
     Serial.print("az=");
     Serial.println(Motion.getAccel(z));
 
-    delay(50);
+    delay(250);
 }
