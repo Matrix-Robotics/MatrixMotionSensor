@@ -19,4 +19,4 @@ Temperature monitor.
 MIT
 
 ## Orientation of Axis
-<img src="./_media/axis.png" width="45%">
+<img src="/_media/axis.png" width="45%">
