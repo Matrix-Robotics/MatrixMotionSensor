@@ -1,6 +1,6 @@
 #include "MatrixMotionSensor.h"
 
-// ver starts from 1, ch starts from 0
+
 bool MatrixMotion::begin(){
 	Wire.begin();
 
