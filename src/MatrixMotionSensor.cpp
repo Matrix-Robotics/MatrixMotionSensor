@@ -3,8 +3,7 @@
 // ver starts from 1, ch starts from 0
 bool MatrixMotion::begin(){
 	Wire.begin();
-	_ver = ver;
-	_ch = ch;
+
 	i2cMUXSelect();
 	delay(50);
 	if(i2cReadData(Device_ID) == 0x44){
