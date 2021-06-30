@@ -9,7 +9,7 @@ bool MatrixMotion::begin(){
 	if(i2cReadData(Device_ID) == 0x44){
 		i2cWriteData(Device_CONFIG, 0x08); // reset
 		delay(500);
-		// i2cWriteData(Device_CONFIG, 0x0F); // enable
+		i2cWriteData(Device_CONFIG, 0x04); // enable
 		return true;
 	}
 	else{
