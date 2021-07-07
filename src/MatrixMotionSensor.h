@@ -10,30 +10,6 @@
 
 #define MatrixMotion_ADDR 0x23
 
-typedef enum __MotionRegType
-{
-	Device_ID = 1,
-	Device_CONFIG,
-	ROLL_H,
-	ROLL_L,
-	YAW_H,
-	YAW_L,
-	PITCH_L,
-	GYRO_X_H,
-	GYRO_X_L,
-	GYRO_Y_H,
-	GYRO_Y_L,
-	GYRO_Z_H,
-	GYRO_Z_L,
-	ACCEL_X_H,
-	ACCEL_X_L,
-	ACCEL_Y_H,
-	ACCEL_Y_L,
-	ACCEL_Z_H,
-	ACCEL_Z_L,
-	Temp
-} MotionRegType;
-
 typedef enum __AxisType
 {
 	x = 0,
@@ -52,6 +28,30 @@ typedef enum __FilterType
 
 class MatrixMotion{
 private:
+	typedef enum __MotionRegType
+	{
+		Device_ID = 1,
+		Device_CONFIG,
+		ROLL_H,
+		ROLL_L,
+		YAW_H,
+		YAW_L,
+		PITCH_L,
+		GYRO_X_H,
+		GYRO_X_L,
+		GYRO_Y_H,
+		GYRO_Y_L,
+		GYRO_Z_H,
+		GYRO_Z_L,
+		ACCEL_X_H,
+		ACCEL_X_L,
+		ACCEL_Y_H,
+		ACCEL_Y_L,
+		ACCEL_Z_H,
+		ACCEL_Z_L,
+		Temp
+	} MotionRegType;
+
 	uint8_t _ch=0, _ver=1;
 	uint8_t i2cReadData(MotionRegType reg);
 	void i2cMUXSelect();
