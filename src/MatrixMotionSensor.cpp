@@ -3,7 +3,6 @@
 
 bool MatrixMotion::begin(){
 	Wire.begin();
-
 	i2cMUXSelect();
 	delay(50);
 	if(i2cReadData(Device_ID) == 0x44){
@@ -72,7 +71,6 @@ int MatrixMotion::getRoll(){
 		data -= 65536;
 	}
 	return data;
-
 }
 
 int MatrixMotion::getYaw(){
@@ -87,7 +85,12 @@ int MatrixMotion::getYaw(){
 int MatrixMotion::getPitch(){
 	i2cMUXSelect();
 	int data = (uint8_t)(i2cReadData(PITCH_L));
-	return data-90;
+	if (data>180){
+		return -1;
+	}
+	else{
+		return data-90;
+	}
 }
 
 int MatrixMotion::getGyro(AxisType axis){
