@@ -19,4 +19,4 @@ Temperature monitor.
 MIT
 
 ## Orientation of Axis
-<img src="docs/_media/axis.png" width="60%">
+<img src="https://github.com/Matrix-Robotics/MatrixMotionSensor/blob/main/docs/_media/axis.png" width="60%">
