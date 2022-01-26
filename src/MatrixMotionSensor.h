@@ -17,39 +17,30 @@ typedef enum __AxisType
 	z
 } AxisType;
 
-typedef enum __FilterType
-{
-	NONE = 0, 
-	GYRO, // Gyro angle data
-	CPLTY, // Complimentary_filter
-	KALMAN // Kalman Filter
-} FilterType;
-
-
 class MatrixMotion{
 private:
 	typedef enum __MotionRegType
 	{
 		Device_ID = 1,
 		Device_CONFIG,
-		ROLL_H,
 		ROLL_L,
-		YAW_H,
-		YAW_L,
+		ROLL_H,
 		PITCH_L,
-		GYRO_X_H,
+		PITCH_H,
+		YAW_L,
+		YAW_H,
 		GYRO_X_L,
-		GYRO_Y_H,
+		GYRO_X_H,
 		GYRO_Y_L,
-		GYRO_Z_H,
+		GYRO_Y_H,
 		GYRO_Z_L,
-		ACCEL_X_H,
+		GYRO_Z_H,
 		ACCEL_X_L,
-		ACCEL_Y_H,
+		ACCEL_X_H,
 		ACCEL_Y_L,
-		ACCEL_Z_H,
+		ACCEL_Y_H,
 		ACCEL_Z_L,
-		Temp
+		ACCEL_Z_H,
 	} MotionRegType;
 
 	uint8_t _ch=0, _ver=1;
@@ -59,15 +50,13 @@ private:
 public:
 	friend class MiniI2C;
 	bool begin();
-	void setFilter(FilterType filter);
 
 	int getRoll();
-	int getYaw();
 	int getPitch();
+	int getYaw();
+
 	int getGyro(AxisType axis);
 	int getAccel(AxisType axis);
-	float getTemperature();
-
 };
 
 #endif

@@ -1,11 +1,9 @@
 # Matrix Motion Sensor Arduino Library
-Matrix Motion sensor is an Inertial Measurement Unit 9-Degree Of Freedom sensor, 
+Matrix Motion sensor is an Inertial Measurement Unit 6-Degree Of Freedom sensor, 
 communicate by I2C interface.
 ## Features
 Support Euler angle data.<br>
-Gyro data, accel data.<br>
-Internal filter select.<br>
-Temperature monitor.
+Gyro data, accel data.
 ## Repository Contents
 * [**/docs**](./docs) - MATRIX Motion Sensor documentation.
 * [**/examples**](./examples) - Example sketches for the library (.ino). Run these from the Arduino IDE.

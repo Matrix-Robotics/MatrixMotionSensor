@@ -12,28 +12,6 @@ bool begin()
 ***
 <br />
 
-## Set Filter
-
-Set filter to stabilize Euler angle output.
-
-```Arduino
-void setFilter(FilterType filter)
-```
-
-### Parameters
-
-- `FilterType` is a string of filter name. (Options: `NONE` / `GYRO` / `CPLTY` / `KALMAN`)
-
-### Meaning of options
-
-- NONE: No Filter
-- GYRO: Gyro Angle Data
-- CPLTY: Complimentary Filter
-- KALMAN: Kalman Filter
-<br /><br /><br />
-***
-<br />
-
 ## Get Gyro
 
 Get **gyro** data from the given axis.
@@ -114,19 +92,4 @@ int getYaw()
 ### Return
 
 - An **int** number from `-180` through `180`. (unit: degree)
-<br /><br /><br />
-***
 <br />
-
-
-## Get Temperature
-
-Get **Temperature** data. 
-
-```arduino
-int getTemperature()
-```
-
-### Return
-
-- An **int** number from `-127` through `127`. (unit: degree Celsius)

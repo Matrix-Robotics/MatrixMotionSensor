@@ -22,13 +22,13 @@ void loop()
     Serial.print("roll=");
     Serial.println(Motion.getRoll());
 
-    // Yaw range -180 to 180
-    Serial.print("yaw=");
-    Serial.println(Motion.getYaw());
-
     // pitch range -90 to 90
     Serial.print("pitch=");
     Serial.println(Motion.getPitch());
+
+    // Yaw range -180 to 180
+    Serial.print("yaw=");
+    Serial.println(Motion.getYaw());
 
     delay(250);
 }
